@@ -1,0 +1,52 @@
+<!-- /templates/index.html -->
+<html>
+	<body>
+		<head>
+        	<link rel="stylesheet" href="/static/style.css">
+        	<link rel="stylesheet" href="/static/ttt.css">
+        	<script type='text/javascript' > 
+				var mutex = false;
+				var humanFirst = true;
+			</script>
+        	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        	<script src="/static/ttt.js"></script>
+    	</head>
+
+		<div class="topnav">
+			<a href="home">Home</a>
+			<a href="contact">Contact</a>
+			<a href="about">About</a>
+			<a class = "active" href="ttt">Tic-Tac-Toe</a>
+		</div> 
+
+		<h1 id = "title">Play Tic Tac Toe</h1>
+		
+		<table>
+		  <tr>
+		    <td><div class = "cell" id ="1" onclick = "move('1')"> &#10;</div></td>
+		    <td class="vert"><div class = "cell" id ="2" onclick = "move('2')"> &#10;</div></td>
+		    <td><div class = "cell" id ="3" onclick = "move('3')"> &#10;</div></td>
+		  </tr>
+		  <tr>
+		    <td class="hori"><div class = "cell" id ="4" onclick = "move('4')"> &#10;</div></td>
+		    <td class="vert hori"><div class = "cell" id ="5" onclick = "move('5')"> &#10;</div></td>
+		    <td class="hori"><div class = "cell" id ="6" onclick = "move('6')"> &#10;</div></td>
+		  </tr>
+		  <tr>
+		    <td><div class = "cell" id ="7" onclick = "move('7')"> &#10;</div></td>
+		    <td class="vert"><div class = "cell" id ="8" onclick = "move('8')"> &#10;</div></td>
+		    <td><div class = "cell" id ="9" onclick = "move('9')"> &#10;</div></td>
+		  </tr>
+		</table>
+		<button class = "clear_button" onclick="clear_board()">New Game</button>
+		<div>
+			<input type="checkbox" id="first" name="Go First" checked>
+			<label for="first">Go First</label>
+		</div>
+		<div>
+			<input type="checkbox" id="easy" name="easy">
+			<label for="easy">Easy Mode (give yourself a chance)</label>
+		</div>
+		<script>clear_board()</script>
+    </body>
+</html>
